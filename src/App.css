@@ -2,12 +2,6 @@
   text-align: center;
 }
 
-/* .dark-theme {
-  --background-color: #0f171e;
-  --foreground-color: #fff;
-
-  --accent--one-color: #1a242f;
-} */
 :root{
   --background-color: #0f171e;
   --foreground-color: #fff;
