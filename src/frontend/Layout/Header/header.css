@@ -1,0 +1,56 @@
+.web-logo-img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.header-bar {
+  background-color: var(--accent--one-color);
+  color: var(--foreground-color);
+}
+
+.header-left-content {
+  align-items: center;
+}
+
+.header-right-content {
+  margin-right: inherit;
+}
+
+.search-wrapper {
+  border: 1px solid var(--foreground-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.search-icon {
+  font-size: 1.5rem;
+}
+.search-bar {
+  outline: none;
+  background-color: var(--accent--one-color);
+  border: none;
+  color: var(--foreground-color);
+}
+.profile-icon {
+  font-size: 2rem;
+}
+.dropdown-menu {
+  display: none;
+}
+
+@media only screen and (max-width: 750px) {
+  .header-options {
+    display: none;
+  }
+  .search-bar {
+    display: none;
+  }
+  .search-wrapper {
+    border: none;
+  }
+  .dropdown-menu {
+    display: initial;
+  }
+}
