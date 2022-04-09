@@ -14,7 +14,7 @@ export const Header = () => {
   return (
     <header className="flex-row header-bar spc-btwn">
       <div className="flex-row header-left-content gap-btwn">
-        <img className="web-logo-img" src="./assets/gamseylogo.jpg" alt="" />
+        <img className="web-logo-img" src="./assets/gamseylogo.jpg" alt="logo" />
         <h1 className="flex-row web-logo">Gamsey</h1>
         <div className="flex-row gap-btwn header-options">
           <div className="flex-col center-it">
