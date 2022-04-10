@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Gamsey",
+  "name": "Gamsey | A Gamer's Exploration 🎮",
+  "description": "Gamsey is a collection of all the gaming videos of the legendary gaming channels, their gameplay, live steams, trailers and reviews. Encompassing all genres from fps, action, puzzle, dance, sports featuring the most iconic gameplay.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +21,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#ffffff",
+  "background_color": "#181818"
 }

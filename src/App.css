@@ -1,3 +1,14 @@
 .App {
   text-align: center;
 }
+
+:root{
+  --background-color: #0f171e;
+  --foreground-color: #fff;
+
+  --accent--one-color: #1a242f;
+}
+
+body {
+  background-color: var(--background-color);
+}
