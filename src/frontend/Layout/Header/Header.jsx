@@ -4,10 +4,14 @@ import {
   MdOutlineSearch,
   CgProfile,
   IoMdArrowDropdown,
+  MdDarkMode,
+  MdOutlineLightMode,
 } from "../../constants/react-icons";
+import { useTheme } from "../../context/theme-context";
 import "./header.css";
 
 export const Header = () => {
+  const { theme, toggleTheme } = useTheme();
   return (
     <header className="flex-row header-bar spc-btwn">
       <div className="flex-row header-left-content gap-btwn">
@@ -38,6 +42,11 @@ export const Header = () => {
           <MdOutlineSearch className="search-icon" />
           <input type="text" placeholder="Search " className="search-bar" />
         </div>
+        {theme === "light" ? (
+          <MdOutlineLightMode onClick={toggleTheme} />
+        ) : (
+          <MdDarkMode onClick={toggleTheme} />
+        )}
         <CgProfile className="profile-icon" />
       </div>
     </header>
