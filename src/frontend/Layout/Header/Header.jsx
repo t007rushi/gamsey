@@ -20,7 +20,7 @@ export const Header = () => {
         <div className="flex-row gap-btwn header-options">
           {optionsData.map((option) => {
             return (
-              <div className="flex-col center-it">
+              <div key={option.id} className="flex-col center-it">
                 {option.Icon}
                 <span>{option.title}</span>
               </div>

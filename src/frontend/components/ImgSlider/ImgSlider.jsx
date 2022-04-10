@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import "./slider.css";
 
 export const ImgSlider = () => {
-  var settings = {
+  const settings = {
     dots: true,
     infinite: true,
     speed: 500,
