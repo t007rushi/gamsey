@@ -12,7 +12,7 @@
 }
 
 .slick-dots li.slick-active button:before {
-  color: var(--foreground-color);
+  color: var(--fixed-white-color);
   font-size: large;
 }
 
@@ -22,5 +22,5 @@
 
 .slick-dots li button:before {
   font-size: 10px;
-  color: var(--foreground-color);
+  color: var(--fixed-white-color);
 }
