@@ -1,0 +1,14 @@
+.footer-container {
+  color: var(--foreground-color);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--accent--one-color);
+  padding: 7px;
+}
+
+.footer-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
