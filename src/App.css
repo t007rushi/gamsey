@@ -2,11 +2,29 @@
   text-align: center;
 }
 
-:root{
+.dark-theme{
   --background-color: #0f171e;
   --foreground-color: #fff;
 
   --accent--one-color: #1a242f;
+  --accent--two-color: #181818;
+
+  /* fixed colors for both theme  */
+  --fixed-white-color:#fff;
+  --fixed-black-color:#000;
+}
+
+.light-theme{
+  --background-color: #fff;
+  --foreground-color: #030303;
+
+  --accent--one-color: #F9F9F9;
+  --accent--two-color: #F2F2F2;
+ 
+  /* fixed colors for both theme  */
+  --fixed-white-color:#fff;
+  --fixed-black-color:#000;
+
 }
 
 body {
