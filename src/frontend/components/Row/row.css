@@ -60,3 +60,7 @@
 .backward-arrow {
   left: 0;
 }
+
+.title_wrap{
+  transition: all ease 1s;
+}
