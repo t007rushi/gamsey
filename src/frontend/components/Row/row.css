@@ -1,0 +1,62 @@
+/* row related css */
+.row-wrapper {
+  margin-left: 3rem;
+  position: relative;
+}
+
+.row-content {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  gap: 1rem;
+
+  padding: 15px;
+  transition: all ease 1s;
+}
+
+.row-content::-webkit-scrollbar {
+  display: none;
+}
+
+.row-title {
+  color: var(--foreground-color);
+  margin-right: auto;
+  margin-top: 3rem;
+}
+
+/* element related css */
+.title_poster {
+  object-fit: contain;
+  max-height: 20rem;
+  max-width: 25rem;
+  margin-right: 10px;
+  border-radius: 5px;
+  transition: transform 450ms;
+}
+
+.title_poster:hover {
+  transform: scale(1.06);
+}
+
+.sliderarrow {
+  font-size: 3rem;
+  width: 50px;
+  height: 100%;
+  color: var(--foreground-color);
+  background-color: var(--accent--two-color);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 2;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.forward-arrow {
+  right: 0;
+}
+
+.backward-arrow {
+  left: 0;
+}
