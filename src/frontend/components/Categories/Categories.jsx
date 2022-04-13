@@ -6,12 +6,12 @@ export const Categories = () => {
   
   return (
     <div className="category-container">
-      {categoryData.map((item) => {
+      {categoryData.map(({categoryName,image,video}) => {
         return (
-          <div key={item.categoryName} className="category-wrapper">
-            <img src={item.image} alt="items" className="category" />
+          <div key={categoryName} className="category-wrapper">
+            <img src={image} alt="items" className="category" />
             <video autoPlay={true} loop={true} playsInline={true} muted={true}>
-                <source src={item.video} type="video/mp4"/>
+                <source src={video} type="video/mp4"/>
             </video>
           </div>
         );

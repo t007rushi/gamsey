@@ -13,13 +13,13 @@ export const Row = ({ cat, title }) => {
   useEffect(() => {
     fetchVideos();
   }, []);
-  const pcGames = videos.filter((vid) => vid.categoryName === cat);
+  const Games = videos.filter((vid) => vid.categoryName === cat);
   const ArrowHandler = (dir) => {
     if (dir === "right") {
-      setVal((v) => v - 50);
+      setVal(v => v - 20);
     }
     if (dir === "left") {
-      setVal((v) => v + 50);
+      setVal(v => v + 20);
     }
   };
 
@@ -32,16 +32,15 @@ export const Row = ({ cat, title }) => {
           onClick={() => ArrowHandler("left")}
         />
         <div className="row-content">
-          {pcGames.map((item) => {
+          {Games.map(({_id,image}) => {
             return (
               <div
-                key={item._id}
+                key={_id}
                 className="title_wrap"
                 style={{ transform: `translateX(${val}rem)` }}
               >
                 <img
-                  key={item._id}
-                  src={item.image}
+                  src={image}
                   alt="images"
                   className="title_poster"
                 />
