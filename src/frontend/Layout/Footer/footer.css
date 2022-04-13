@@ -1,11 +1,9 @@
 .footer-container {
   color: var(--foreground-color);
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  position: sticky;
   background-color: var(--accent--one-color);
   padding: 7px;
+  z-index: 2;
 }
 
 .footer-icon {

@@ -1,6 +1,10 @@
 import React from "react";
-import { ImgSlider } from "../../components/ImgSlider/ImgSlider";
+import { HomePage } from "../../pages/index";
 
 export const Main = () => {
-  return <ImgSlider />;
+  return (
+    <div>
+      <HomePage />
+    </div>
+  );
 };
