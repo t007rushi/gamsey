@@ -9,7 +9,6 @@
   overflow-y: hidden;
   overflow-x: scroll;
   gap: 1rem;
-
   padding: 15px;
   transition: all ease 1s;
 }
@@ -27,8 +26,8 @@
 /* element related css */
 .title_poster {
   object-fit: contain;
-  max-height: 20rem;
-  max-width: 25rem;
+  max-height: 15rem;
+  max-width: 20rem;
   margin-right: 10px;
   border-radius: 5px;
   transition: transform 450ms;
@@ -40,7 +39,7 @@
 
 .sliderarrow {
   font-size: 3rem;
-  width: 50px;
+  width: 4rem;
   height: 100%;
   color: var(--foreground-color);
   background-color: var(--accent--two-color);
@@ -61,6 +60,17 @@
   left: 0;
 }
 
-.title_wrap{
+.title_wrap {
   transition: all ease 1s;
+  transform: translateX(0rem);
+}
+
+@media only screen and (max-width: 520px) {
+  .sliderarrow {
+    display: none;
+  }
+
+  .title_poster {
+    max-width: 15rem;
+  }
 }
