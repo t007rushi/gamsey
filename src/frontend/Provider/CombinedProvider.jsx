@@ -1,10 +1,12 @@
 import React from "react";
-import { ThemeProvider, VideoProvider } from "../context/index";
+import { ThemeProvider, VideoProvider, AuthProvider } from "../context/index";
 
 const CombinedProvider = ({ children }) => {
   return (
     <ThemeProvider>
-      <VideoProvider>{children}</VideoProvider>
+      <AuthProvider>
+        <VideoProvider>{children}</VideoProvider>
+      </AuthProvider>
     </ThemeProvider>
   );
 };
