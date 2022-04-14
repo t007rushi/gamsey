@@ -1,6 +1,10 @@
 import { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import {logInHandlerService,signUpHandlerService} from "../services"
+import {
+  logInHandlerService,
+  signUpHandlerService,
+  signOutHandlerService,
+} from "../services";
 
 const authContext = createContext();
 const token = localStorage.getItem("Auth_token");
@@ -30,9 +34,16 @@ const AuthProvider = ({ children }) => {
     localStorage.setItem("token", data.encodedToken);
     navigator("/notes");
   };
+  const signOutHandler = async () => {
+    signOutHandlerService();
+    setUser({ isUserLoggedIn: false });
+    navigator("/");
+  };
 
   return (
-    <authContext.Provider value={{ user, setUser, logInHandler,signUpHandler }}>
+    <authContext.Provider
+      value={{ user, setUser, logInHandler, signUpHandler, signOutHandler }}
+    >
       {children}
     </authContext.Provider>
   );
