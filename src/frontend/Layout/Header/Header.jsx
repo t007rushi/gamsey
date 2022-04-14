@@ -59,7 +59,9 @@ export const Header = () => {
           <MdDarkMode onClick={toggleTheme} />
         )}
         {!isUserLoggedIn ? (
-          <NavLink to="/login" className="login-btn">Login</NavLink>
+          <NavLink to="/login" className="login-btn">
+            Login
+          </NavLink>
         ) : (
           <div
             className="profile-container"
