@@ -31,8 +31,8 @@ const AuthProvider = ({ children }) => {
   const signUpHandler = async ({ first, last, email, password }) => {
     const data = await signUpHandlerService(first, last, email, password);
     // saving the encodedToken in the localStorage
-    localStorage.setItem("token", data.encodedToken);
-    navigator("/notes");
+    localStorage.setItem("Auth_token", data.encodedToken);
+    navigator("/");
   };
   const signOutHandler = async () => {
     signOutHandlerService();
