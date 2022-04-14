@@ -1,7 +1,6 @@
 .footer-container {
   color: var(--foreground-color);
   position: sticky;
-  background-color: var(--accent--one-color);
   padding: 7px;
   z-index: 2;
 }
