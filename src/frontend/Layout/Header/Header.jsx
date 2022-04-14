@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { optionsData } from "../../constants/data/optionsData";
 import {
   MdOutlineSearch,
@@ -22,12 +23,12 @@ export const Header = () => {
         />
         <h1 className="flex-row web-logo">Gamsey</h1>
         <div className="flex-row gap-btwn header-options">
-          {optionsData.map((option) => {
+          {optionsData.map(({ id, Icon, title, link }) => {
             return (
-              <div key={option.id} className="flex-col center-it">
-                {option.Icon}
-                <span>{option.title}</span>
-              </div>
+              <NavLink to={link} key={id} className="flex-col center-it">
+                {Icon}
+                <span>{title}</span>
+              </NavLink>
             );
           })}
         </div>
