@@ -65,8 +65,7 @@ export const Header = () => {
         ) : (
           <div
             className="profile-container"
-            onMouseEnter={() => showProfileop(true)}
-            onMouseLeave={() => showProfileop(false)}
+            onClick={() => showProfileop((curr) => !curr)}
           >
             <CgProfile className="profile-icon" />
             {profileop && (
