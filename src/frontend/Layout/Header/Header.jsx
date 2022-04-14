@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import { optionsData } from "../../constants/data/optionsData";
 import {
   MdOutlineSearch,
@@ -7,27 +8,37 @@ import {
   MdDarkMode,
   MdOutlineLightMode,
 } from "../../constants/react-icons";
+import { useAuth } from "../../context/auth-context";
 import { useTheme } from "../../context/theme-context";
 import "./header.css";
 
 export const Header = () => {
   const { theme, toggleTheme } = useTheme();
+  const {
+    user: { isUserLoggedIn },
+    signOutHandler,
+  } = useAuth();
+  const [profileop, showProfileop] = useState(false);
+
+  // const
+
   return (
     <header className="flex-row header-bar spc-btwn">
       <div className="flex-row header-left-content gap-btwn">
-        <img
-          className="web-logo-img"
-          src="./assets/gamseylogo.jpg"
-          alt="logo"
-        />
-        <h1 className="flex-row web-logo">Gamsey</h1>
+        <NavLink to="/" className="flex-row web-logo">
+          Gamsey
+        </NavLink>
         <div className="flex-row gap-btwn header-options">
-          {optionsData.map((option) => {
+          {optionsData.map(({ id, Icon, title, link }) => {
             return (
-              <div key={option.id} className="flex-col center-it">
-                {option.Icon}
-                <span>{option.title}</span>
-              </div>
+              <NavLink
+                to={link}
+                key={id}
+                className="flex-col center-it nav-elements"
+              >
+                {Icon}
+                <span>{title}</span>
+              </NavLink>
             );
           })}
         </div>
@@ -47,7 +58,25 @@ export const Header = () => {
         ) : (
           <MdDarkMode onClick={toggleTheme} />
         )}
-        <CgProfile className="profile-icon" />
+        {!isUserLoggedIn ? (
+          <NavLink to="/login" className="login-btn">
+            Login
+          </NavLink>
+        ) : (
+          <div
+            className="profile-container"
+            onMouseEnter={() => showProfileop(true)}
+            onMouseLeave={() => showProfileop(false)}
+          >
+            <CgProfile className="profile-icon" />
+            {profileop && (
+              <div className="flex-col spac-btwn center-it profile-options">
+                <span>Account</span>
+                <span onClick={signOutHandler}>Log Out</span>
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </header>
   );

@@ -1,3 +1,7 @@
+.web-logo{
+text-decoration: none;
+}
+
 .web-logo-img {
   width: 2rem;
   height: 2rem;
@@ -38,6 +42,39 @@
 }
 .dropdown-menu {
   display: none;
+}
+
+.nav-elements{
+  color:var(--foreground-color);
+  text-decoration: none;
+}
+
+.profile-container{
+  position:relative;
+}
+
+.profile-options{
+position:absolute;
+background-color: var(--accent--three-color);
+z-index: 2;
+right: 0;
+padding:15px;
+max-width:15rem;
+height: 4rem;
+border-radius:5px;
+gap:10px;
+}
+
+.profile-options span:hover{
+cursor:pointer;
+}
+
+.login-btn{
+  text-decoration: none;
+  color:var(--foreground-color);
+  background-color: var(--secondary-color);
+  padding:5px 10px;
+  border-radius:5px;
 }
 
 @media only screen and (max-width: 750px) {

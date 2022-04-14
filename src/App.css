@@ -8,6 +8,7 @@
 
   --accent--one-color: #1a242f;
   --accent--two-color: #181818;
+  --accent--three-color:#192133;
 
   /* fixed colors for both theme  */
   --fixed-white-color:#fff;
@@ -20,6 +21,7 @@
 
   --accent--one-color: #F9F9F9;
   --accent--two-color: #F2F2F2;
+  --accent--three-color:#F3F3F3;
  
   /* fixed colors for both theme  */
   --fixed-white-color:#fff;
