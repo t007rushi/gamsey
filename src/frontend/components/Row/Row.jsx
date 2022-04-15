@@ -5,6 +5,10 @@ import "./row.css";
 import {
   MdOutlineArrowForwardIos,
   MdArrowBackIos,
+  RiPlayList2Fill,
+  AiOutlineLike,
+  MdOutlineWatchLater,
+  RiHistoryLine,
 } from "../../constants/react-icons";
 
 export const Row = ({ cat, title }) => {
@@ -16,10 +20,10 @@ export const Row = ({ cat, title }) => {
   const Games = videos.filter((vid) => vid.categoryName === cat);
   const ArrowHandler = (dir) => {
     if (dir === "right") {
-      setVal(v => v - 20);
+      setVal((v) => v - 20);
     }
     if (dir === "left") {
-      setVal(v => v + 20);
+      setVal((v) => v + 20);
     }
   };
 
@@ -32,18 +36,20 @@ export const Row = ({ cat, title }) => {
           onClick={() => ArrowHandler("left")}
         />
         <div className="row-content">
-          {Games.map(({_id,image}) => {
+          {Games.map(({ _id, image }) => {
             return (
               <div
                 key={_id}
                 className="title_wrap"
                 style={{ transform: `translateX(${val}rem)` }}
               >
-                <img
-                  src={image}
-                  alt="images"
-                  className="title_poster"
-                />
+                <img src={image} alt="images" className="title_poster" />
+                <div className="option-icons">
+                  <RiPlayList2Fill />
+                  <AiOutlineLike />
+                  <MdOutlineWatchLater />
+                  <RiHistoryLine />
+                </div>
               </div>
             );
           })}
