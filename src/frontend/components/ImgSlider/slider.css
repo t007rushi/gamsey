@@ -25,6 +25,7 @@
   color: var(--fixed-white-color);
 }
 
-.slick-slide img{
-margin-top: 5rem;
+.slick-slider {
+  margin: 0 2rem;
+  margin-top: 5rem;
 }
