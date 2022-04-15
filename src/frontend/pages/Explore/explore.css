@@ -1,0 +1,33 @@
+.vid-listing-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 5rem 3rem;
+}
+
+.vid-wrapper {
+  flex-grow: 1;
+  min-height: 15rem;
+  width: 20rem;
+}
+
+.vid-wrapper img {
+  height: 14rem;
+  width: 100%;
+}
+
+.vid-details {
+  align-items: flex-start;
+  color: var(--foreground-color);
+  gap: 5px;
+  /* margin-left: 10px; */
+  padding: 10px;
+}
+
+.views-time-wrap {
+  color: var(--fixed-grey-color);
+}
+
+.title-optionicon-wrap{
+  width: 100%;
+}
