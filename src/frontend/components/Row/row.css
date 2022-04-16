@@ -37,6 +37,7 @@
   transform: scale(1.06);
 }
 
+
 .sliderarrow {
   font-size: 3rem;
   width: 4rem;
@@ -63,6 +64,7 @@
 .title_wrap {
   transition: all ease 1s;
   transform: translateX(0rem);
+  position: relative;
 }
 
 @media only screen and (max-width: 520px) {
@@ -73,4 +75,20 @@
   .title_poster {
     max-width: 15rem;
   }
+}
+
+.option-icons{
+color: var(--foreground-color);
+position: absolute;
+bottom: 10px;
+left: 0;
+right: 0;
+display: none;
+align-content: center;
+justify-content: space-around;
+cursor: pointer;
+}
+
+.title_poster:hover ~ .option-icons{
+  display: flex;
 }

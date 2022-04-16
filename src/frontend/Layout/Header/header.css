@@ -1,5 +1,5 @@
-.web-logo{
-text-decoration: none;
+.web-logo {
+  text-decoration: none;
 }
 
 .web-logo-img {
@@ -10,6 +10,9 @@ text-decoration: none;
 .header-bar {
   background-color: var(--accent--one-color);
   color: var(--foreground-color);
+  z-index: 5;
+  position: fixed;
+  top: 0;
 }
 
 .header-left-content {
@@ -44,37 +47,37 @@ text-decoration: none;
   display: none;
 }
 
-.nav-elements{
-  color:var(--foreground-color);
+.nav-elements {
+  color: var(--foreground-color);
   text-decoration: none;
 }
 
-.profile-container{
-  position:relative;
+.profile-container {
+  position: relative;
 }
 
-.profile-options{
-position:absolute;
-background-color: var(--accent--three-color);
-z-index: 2;
-right: 0;
-padding:15px;
-max-width:15rem;
-height: 4rem;
-border-radius:5px;
-gap:10px;
+.profile-options {
+  position: absolute;
+  background-color: var(--accent--three-color);
+  z-index: 3;
+  right: 0;
+  padding: 15px;
+  max-width: 15rem;
+  height: 4rem;
+  border-radius: 5px;
+  gap: 10px;
 }
 
-.profile-options span:hover{
-cursor:pointer;
+.profile-options span:hover {
+  cursor: pointer;
 }
 
-.login-btn{
+.login-btn {
   text-decoration: none;
-  color:var(--foreground-color);
+  color: var(--foreground-color);
   background-color: var(--secondary-color);
-  padding:5px 10px;
-  border-radius:5px;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
 @media only screen and (max-width: 750px) {

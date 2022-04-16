@@ -24,3 +24,8 @@
   font-size: 10px;
   color: var(--fixed-white-color);
 }
+
+.slick-slider {
+  margin: 0 2rem;
+  margin-top: 5rem;
+}

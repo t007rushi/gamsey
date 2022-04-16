@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { useAuth } from "../../context/auth-context";
 import {
+  Explore,
   History,
   HomePage,
   Liked,
@@ -33,7 +34,7 @@ export const Main = () => {
             <ProtectedRoute ProtectedComp={<PlayList />}></ProtectedRoute>
           }
         />
-
+        <Route path="/explore" element={<Explore />} />
         <Route path="/liked" element={<Liked />} />
         <Route path="/watchlater" element={<WatchLater />} />
         <Route path="/history" element={<History />} />
