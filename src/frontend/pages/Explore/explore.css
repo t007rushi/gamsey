@@ -9,8 +9,12 @@
   flex-grow: 1;
   min-height: 15rem;
   width: 20rem;
+  transition: transform 450ms;
 }
 
+.vid-wrapper:hover {
+  transform: scale(1.06);
+}
 .vid-wrapper img {
   height: 14rem;
   width: 100%;
@@ -27,6 +31,6 @@
   color: var(--fixed-grey-color);
 }
 
-.title-optionicon-wrap{
+.title-optionicon-wrap {
   width: 100%;
 }

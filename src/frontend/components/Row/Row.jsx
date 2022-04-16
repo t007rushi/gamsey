@@ -20,10 +20,10 @@ export const Row = ({ cat, title }) => {
   const Games = videos.filter((vid) => vid.categoryName === cat);
   const ArrowHandler = (dir) => {
     if (dir === "right") {
-      setVal((v) => v - 20);
+      setVal((vidWidth) => vidWidth - 20);
     }
     if (dir === "left") {
-      setVal((v) => v + 20);
+      setVal((vidWidth) => vidWidth + 20);
     }
   };
 

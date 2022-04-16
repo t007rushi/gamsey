@@ -3,15 +3,14 @@
   background-color: var(--background-color);
   position: fixed;
   width: 100%;
-  top:4.3rem;
+  top: 4.3rem;
   align-items: flex-start;
 }
 
-.options-mob-view{
-    padding: 10px 0;
-    margin-left: 1rem;
+.options-mob-view {
+  padding: 10px 0;
+  margin-left: 1rem;
 }
-/* rgba(0,0,0,.6) */
 
 @media only screen and (min-width: 750px) {
   .option-modal {

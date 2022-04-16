@@ -8,7 +8,7 @@ import { v4 as uuid } from "uuid";
 export const videos = [
   {
     _id: "-IJuKT1mHO8",
-    title: "far cry 6",
+    title: "Far cry 6",
     image:
       "https://ik.imagekit.io/t007rushi/VideoCardImages/pc/farcry6_KgK7f2lbZE.png?ik-sdk-version=javascript-1.4.3&updatedAt=1649669798331",
     categoryName: "pc",
@@ -22,7 +22,7 @@ export const videos = [
   },
   {
     _id: "Dw_oH5oiUSE",
-    title: "read dead redemption",
+    title: "Red Dead Redemption",
     image:
       "https://ik.imagekit.io/t007rushi/VideoCardImages/pc/reddead2v_rqZsscIqT.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649669797684",
     categoryName: "pc",
@@ -36,7 +36,7 @@ export const videos = [
   },
   {
     _id: "ssrNcwxALS4",
-    title: "assasin creed valhala",
+    title: "Aassasin Creed Valhalla",
     image:
       "https://ik.imagekit.io/t007rushi/VideoCardImages/pc/valhala_zn5bOOcjM.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649669797243",
     categoryName: "pc",
@@ -50,7 +50,7 @@ export const videos = [
   },
   {
     _id: "uCd6tbUAy6o",
-    title: "pubg",
+    title: "PUBG Gameplay",
     image:
       "https://ik.imagekit.io/t007rushi/VideoCardImages/pc/minecraft_z6L-K5UqE.png?ik-sdk-version=javascript-1.4.3&updatedAt=1649669795376",
     categoryName: "pc",
@@ -64,7 +64,7 @@ export const videos = [
   },
   {
     _id: "W0JSykBGNcM",
-    title: "minecraft",
+    title: "Minecraft",
     image:
       "https://ik.imagekit.io/t007rushi/VideoCardImages/pc/pubg_RAxWnxw_r.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649669795632",
     categoryName: "pc",
@@ -106,7 +106,7 @@ export const videos = [
   },
   {
     _id: "qIcTM8WXFjk",
-    title: "cyberpunk",
+    title: "Cyberpunk",
     image:
       "https://ik.imagekit.io/t007rushi/VideoCardImages/pc/Cover-art-6_OBK4HFwYY.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1649669794228",
     categoryName: "pc",
@@ -148,7 +148,7 @@ export const videos = [
   },
   {
     _id: "Kh0BeeFMj34",
-    title: "god of war",
+    title: "God of War",
     image:
       "https://ik.imagekit.io/t007rushi/VideoCardImages/ps4/uc_4_thiefs_end_w3rtjQOMj.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649669885170",
     categoryName: "ps4",
@@ -162,7 +162,7 @@ export const videos = [
   },
   {
     _id: "btmN-bWwv0A",
-    title: "uncharted 4",
+    title: "Uncharted 4",
     image:
       "https://ik.imagekit.io/t007rushi/VideoCardImages/ps4/grand_FcLk0K0mY.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649669884230",
     categoryName: "ps4",
@@ -176,7 +176,7 @@ export const videos = [
   },
   {
     _id: "awcGsNZyOxA",
-    title: "Gran turismo 7",
+    title: "Gran Turismo 7",
     image:
       "https://ik.imagekit.io/t007rushi/VideoCardImages/ps4/lastofus2_KQI_ffplq.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1649669884741",
     categoryName: "ps4",
@@ -190,7 +190,7 @@ export const videos = [
   },
   {
     _id: "VdMiY9MEeMk",
-    title: "Guardians of the galaxy",
+    title: "Guardians of the Galaxy",
     image:
       "https://ik.imagekit.io/t007rushi/VideoCardImages/ps4/gotg_me05m6s8z.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1649669884358",
     categoryName: "ps4",
@@ -204,7 +204,7 @@ export const videos = [
   },
   {
     _id: "fsiOi6AJBiA",
-    title: "dead by daylight ",
+    title: "Dead By Daylight ",
     image:
       "https://ik.imagekit.io/t007rushi/VideoCardImages/ps4/maxresdefault_UlW6dryodA.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649669884823",
     categoryName: "ps4",
@@ -218,7 +218,7 @@ export const videos = [
   },
   {
     _id: "A5gVt028Hww",
-    title: "ghost of tsushima",
+    title: "Ghost Of Tsushima",
     image:
       "https://ik.imagekit.io/t007rushi/VideoCardImages/ps4/gos2_8LqsRHSCd.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1649669883172",
     categoryName: "ps4",
@@ -232,7 +232,7 @@ export const videos = [
   },
   {
     _id: "I4o7eSKLN40",
-    title: "final fantasy",
+    title: "Final Fantasy",
     image:
       "https://ik.imagekit.io/t007rushi/VideoCardImages/ps4/final2_ZiPhWsnx8.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649669882725",
     categoryName: "ps4",
@@ -260,7 +260,7 @@ export const videos = [
   },
   {
     _id: "_v6vaJ2RWmQ",
-    title: "call of duty cold war",
+    title: "Call Of Duty Cold War(COD)",
     image:
       "https://ik.imagekit.io/t007rushi/VideoCardImages/ps4/cod-black-ops-cold-war-cover-1597947738556-1_1qkq_BbD8xa5t3.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649669881450",
     categoryName: "ps4",
