@@ -1,0 +1,25 @@
+.video-options-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.video-options-field {
+  background-color: var(--accent--one-color);
+  position: absolute;
+  right: 10px;
+  width: 8rem;
+  height: 8rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.video-option {
+  width: 100%;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.video-option:hover {
+  background-color: var(--accent--two-color);
+  color: var(--foreground-color);
+}
