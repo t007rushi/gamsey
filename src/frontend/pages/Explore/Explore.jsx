@@ -10,11 +10,11 @@ export const Explore = () => {
   );
   return (
     <div className="vid-listing-container">
-      {pcgames.map((item) => {
+      {pcgames.map(({ _id, title, creator, views, createdAt }) => {
         return (
-          <div className="vid-wrapper">
+          <div className="vid-wrapper" key={_id}>
             <img
-              src={`https://img.youtube.com/vi/${item._id}/maxresdefault.jpg`}
+              src={`https://img.youtube.com/vi/${_id}/maxresdefault.jpg`}
               alt="img"
               width="100%"
               height="100%"
@@ -22,12 +22,12 @@ export const Explore = () => {
             <div className="flex-col vid-details">
               <div className="flex-row spc-btwn title-optionicon-wrap">
                 {" "}
-                <h3>{item.title} </h3> <BsThreeDotsVertical />
+                <h3>{title} </h3> <BsThreeDotsVertical />
               </div>
-              <span>⚫ {item.creator} ✔ </span>
+              <span>⚫ {creator} ✔ </span>
               <div className="flex-row center-it views-time-wrap">
-                <span>{`${item.views}k views`}</span> <BsDot />
-                <span>{`${item.createdAt} ago`}</span>
+                <span>{`${views}k views`}</span> <BsDot />
+                <span>{`${createdAt} ago`}</span>
               </div>
             </div>
           </div>
