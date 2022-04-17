@@ -1,7 +1,7 @@
 import React from "react";
 import "./playlistmodal.css";
 import { GrClose } from "../../constants/react-icons";
-import { CreatePlaylits } from "../CreatePlaylist/CreatePlaylits";
+import { CreatePlaylist } from "../CreatePlaylist/CreatePlaylist";
 import { usePlaylists } from "../../context/playlist-context";
 
 export const PlayListModal = ({ closeFun }) => {
@@ -27,7 +27,7 @@ export const PlayListModal = ({ closeFun }) => {
             )
           })}
         </div>
-        <CreatePlaylits />
+        <CreatePlaylist />
       </div>
     </div>
   );
