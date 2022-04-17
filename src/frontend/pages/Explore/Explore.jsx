@@ -1,13 +1,16 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect} from "react";
+import React, { useEffect,useState} from "react";
 import { useVideos } from "../../context/videos-context";
 import { BsDot } from "../../constants/react-icons";
 import "./explore.css";
 import { OptionsField } from "../../components";
+import { PlayListModal } from "../../components/PlayListModal/PlayListModal";
 
 export const Explore = () => {
   const { videos, fetchVideos } = useVideos();
-
+  const [showModal,setShowModal] = useState(false);
+  const closeModal = () => setShowModal(false);
+  const openModal = () => setShowModal(true);
   useEffect(() => {
     fetchVideos();
   }, []);
@@ -28,7 +31,7 @@ export const Explore = () => {
             <div className="flex-col vid-details">
               <div className="flex-row spc-btwn title-optionicon-wrap">
                 <h3>{title} </h3>
-                <OptionsField/>
+                <OptionsField openModal = {openModal}/>
               </div>
               <span>⚫ {creator} ✔ </span>
               <div className="flex-row center-it views-time-wrap">
@@ -40,6 +43,7 @@ export const Explore = () => {
           </div>
         );
       })}
+     {showModal && <PlayListModal closeFun={closeModal}/> }
     </div>
   );
 };
