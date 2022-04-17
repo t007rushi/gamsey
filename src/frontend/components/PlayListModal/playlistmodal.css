@@ -1,0 +1,36 @@
+.modal-container {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 6;
+}
+
+.modal {
+  background-color: white;
+  top: 15rem;
+  left: 45rem;
+  position: fixed;
+  width: 12rem;
+  border-radius: 5px;
+}
+
+.modal-content {
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.playlist-collection-container {
+  height: 6rem;
+  overflow: auto;
+}
+
+.playlist-collection-container label {
+  justify-content: flex-start;
+  margin-left: 10px;
+}
