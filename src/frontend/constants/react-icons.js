@@ -4,3 +4,4 @@ export { MdOutlineWatchLater,MdOutlineSearch,MdDarkMode,MdOutlineLightMode,MdOut
 export { CgProfile } from "react-icons/cg"
 export { IoMdArrowDropdown } from "react-icons/io"
 export { BsGithub,BsTwitter,BsInstagram,BsLinkedin,BsDot,BsThreeDotsVertical } from "react-icons/bs"
+export {GrClose,GrAdd} from "react-icons/gr"
