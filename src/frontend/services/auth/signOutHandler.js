@@ -1,4 +1,4 @@
 
 export const signOutHandlerService = () => {
-    localStorage.removeItem("token");
+    localStorage.removeItem("Auth_token");
   };
