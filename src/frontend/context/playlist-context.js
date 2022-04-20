@@ -18,7 +18,6 @@ const PlaylistProvider = ({ children }) => {
   
 
   const [playlistState,playlistDipatcher] = useReducer(PlaylistReducer,initialState)
-  console.log(playlistState)
 
   //Get Playlists
   const fetchPlaylists = async () => {
