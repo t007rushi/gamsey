@@ -7,9 +7,13 @@ import {
   BsThreeDotsVertical,
 } from "../../constants/react-icons";
 import { useOnClickOutside } from "../../hooks/onClickOutside";
+import { PlayListModal } from "../PlayListModal/PlayListModal";
 
-export const OptionsField = ({openModal}) => {
+export const OptionsField = ({vid}) => {
   const [showOptions, setShowOptions] = useState(false);
+    const [showModal,setShowModal] = useState(false);
+  const closeModal = () => setShowModal(false);
+  const openModal = () => setShowModal(true);
   const optionsRef = useRef();
   useOnClickOutside(optionsRef, () => setShowOptions(false));
   return (
@@ -33,6 +37,7 @@ export const OptionsField = ({openModal}) => {
           </div>
         )}
       </div>
+      {showModal && <PlayListModal closeFun={closeModal} vid={vid}/>}
     </>
   );
 };
