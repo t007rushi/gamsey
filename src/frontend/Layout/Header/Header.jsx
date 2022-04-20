@@ -25,6 +25,7 @@ export const Header = () => {
   const [profileop, showProfileop] = useState(false);
 
   useOnClickOutside(Profieref, () => showProfileop(false));
+  const closeBrowse = () => setShowBrowse(false)
 
   return (
     <>
@@ -89,7 +90,7 @@ export const Header = () => {
           )}
         </div>
       </header>
-      {showBrowse && <Browse />}
+      {showBrowse && <Browse closeBrowse={closeBrowse}/>}
     </>
   );
 };
