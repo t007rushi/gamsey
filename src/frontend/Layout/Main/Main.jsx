@@ -8,6 +8,7 @@ import {
   Liked,
   LoginPage,
   PlayList,
+  PlaylistVideos,
   SignupPage,
 } from "../../pages/index";
 import { WatchLater } from "../../pages/WatchLater/WatchLater";
@@ -32,6 +33,12 @@ export const Main = () => {
           path="/playlist"
           element={
             <ProtectedRoute ProtectedComp={<PlayList />}></ProtectedRoute>
+          }
+        />
+         <Route
+          path="/playlist/:playlistID"
+          element={
+            <ProtectedRoute ProtectedComp={<PlaylistVideos />}></ProtectedRoute>
           }
         />
         <Route path="/explore" element={<Explore />} />
