@@ -1,0 +1,10 @@
+.playlist-poster {
+  max-width: 10rem;
+  max-height: 10rem;
+}
+
+.playlist-container {
+  color: white;
+  margin-top:10rem;
+  flex-wrap: wrap;
+}
