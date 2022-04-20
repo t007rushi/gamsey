@@ -4,6 +4,7 @@ import { GrAdd } from "../../constants/react-icons";
 import { useAuth } from "../../context/auth-context";
 import { usePlaylists } from "../../context/playlist-context";
 import { createNewPlaylist } from "../../services/playlist/createNewPlaylist";
+import "./create-playlist.css"
 
 export const CreatePlaylist = () => {
   const [showCreatePlaylist, setShowCreatePlaylist] = useState(false);
@@ -17,15 +18,16 @@ export const CreatePlaylist = () => {
     title: "",
     description: "",
   });
+
   const handleCreatePlaylist = async () => {
     try {
       const data  = await createNewPlaylist(playlistData, tokenVal);
-      console.log(data)
       playlistDipatcher({type:CREATE_PLAYLIST,payload:data.playlists})
     } catch (err) {
       console.log(err);
     }
   };
+
   return (
     <div>
       {!showCreatePlaylist && (
@@ -38,20 +40,22 @@ export const CreatePlaylist = () => {
         </div>
       )}
       {showCreatePlaylist && (
-        <div>
-          <label htmlFor="title">
-            Title
+        <div className="flex-col CreatePlaylist">
+          <label htmlFor="title" className="create-input">
+          <span> Title</span> 
             <input
               type="text"
+              placeholder="Title for playlist"
               onChange={(e) =>
                 setPlaylistData({ ...playlistData, title: e.target.value })
               }
             />
           </label>
-          <label htmlFor="description">
-            description
+          <label htmlFor="description" className="create-input">
+          <span>   Description</span> 
             <input
               type="text"
+              placeholder="description for playlist"
               onChange={(e) =>
                 setPlaylistData({
                   ...playlistData,
@@ -60,7 +64,7 @@ export const CreatePlaylist = () => {
               }
             />
           </label>
-          <button
+          <button className="create-btn"
             onClick={() => {
               handleCreatePlaylist();
               handleCloseChange();
