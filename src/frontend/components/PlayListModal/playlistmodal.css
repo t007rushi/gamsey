@@ -13,16 +13,11 @@
 .modal {
   background-color: white;
   top: 15rem;
+  color: black;
   left: 45rem;
   position: fixed;
   width: 12rem;
   border-radius: 5px;
-}
-
-.modal-content {
-  padding: 10px;
-  cursor: pointer;
-  width: 100%;
 }
 
 .playlist-collection-container {
