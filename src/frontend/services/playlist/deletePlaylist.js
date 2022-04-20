@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const createNewPlaylist = async (playlistId, token) => {
+export const deletePlaylist = async (playlistId, token) => {
   try {
     const { data } = await axios.delete(`/api/user/playlists/${playlistId}`, {
       headers: {
