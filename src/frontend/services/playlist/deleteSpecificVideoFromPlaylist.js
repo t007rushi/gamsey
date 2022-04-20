@@ -6,7 +6,7 @@ export const deleteSpecificVideoFromPlaylist = async (
   token
 ) => {
   try {
-    const { data } = await axios.post(
+    const { data } = await axios.delete(
       `/api/user/playlists/${playlistId}/${videoId}`,
       {
         headers: {
