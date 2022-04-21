@@ -111,7 +111,6 @@ export const addVideoToPlaylistHandler = function (schema, request) {
     const playlistId = request.params.playlistId;
     const { video } = JSON.parse(request.requestBody);
     const playlist = user.playlists.find((item) => item._id === playlistId);
-    console.log(video)
     if (playlist.videos.some((item) => item._id === video._id)) {
       return new Response(
         409,

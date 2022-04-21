@@ -1,6 +1,6 @@
 import { useState, createContext, useContext,useReducer } from "react";
 import { PlaylistReducer } from "../reducer/playlist-reducer";
-import { getPlaylist } from "../services/playlist/getPlaylist";
+import { getPlaylist } from "../services";
 import { useAuth } from "./auth-context";
 
 const PlaylistContext = createContext();
@@ -12,8 +12,7 @@ const PlaylistProvider = ({ children }) => {
   } = useAuth();
 
   const initialState = {
-    playlists: [],
-    likes:[]
+    playlists: []
   };
   
 
