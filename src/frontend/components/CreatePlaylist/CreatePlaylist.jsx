@@ -3,7 +3,7 @@ import { CREATE_PLAYLIST } from "../../constants/playlist-constants";
 import { GrAdd } from "../../constants/react-icons";
 import { useAuth } from "../../context/auth-context";
 import { usePlaylists } from "../../context/playlist-context";
-import { createNewPlaylist } from "../../services/playlist/createNewPlaylist";
+import { createNewPlaylist } from "../../services";
 import "./create-playlist.css"
 
 export const CreatePlaylist = () => {
