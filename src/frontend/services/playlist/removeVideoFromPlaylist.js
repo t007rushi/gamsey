@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const deleteSpecificVideoFromPlaylist = async (
+export const removeVideoFromPlaylist = async (
   playlistId,
   videoId,
   token
