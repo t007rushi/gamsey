@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { Browse } from "../../components/Browse/Browse";
 import { optionsData } from "../../constants/data/optionsData";
@@ -11,6 +11,7 @@ import {
 } from "../../constants/react-icons";
 import { useAuth } from "../../context/auth-context";
 import { useTheme } from "../../context/theme-context";
+import { useOnClickOutside } from "../../hooks/onClickOutside";
 import "./header.css";
 
 export const Header = () => {
@@ -20,7 +21,11 @@ export const Header = () => {
     user: { isUserLoggedIn },
     signOutHandler,
   } = useAuth();
+  const Profieref = useRef();
   const [profileop, showProfileop] = useState(false);
+
+  useOnClickOutside(Profieref, () => showProfileop(false));
+  const closeBrowse = () => setShowBrowse(false)
 
   return (
     <>
@@ -73,7 +78,10 @@ export const Header = () => {
             >
               <CgProfile className="profile-icon" />
               {profileop && (
-                <div className="flex-col spac-btwn center-it profile-options">
+                <div
+                  className="flex-col spac-btwn center-it profile-options"
+                  ref={Profieref}
+                >
                   <span>Account</span>
                   <span onClick={signOutHandler}>Log Out</span>
                 </div>
@@ -82,7 +90,7 @@ export const Header = () => {
           )}
         </div>
       </header>
-      {showBrowse && <Browse />}
+      {showBrowse && <Browse closeBrowse={closeBrowse}/>}
     </>
   );
 };

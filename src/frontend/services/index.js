@@ -1,3 +1,9 @@
 export { logInHandlerService } from "./auth/logInHandler";
 export { signUpHandlerService } from "./auth/signUpHandler";
 export { signOutHandlerService } from "./auth/signOutHandler";
+export { getPlaylist } from "./playlist/getPlaylist";
+export { createNewPlaylist } from "./playlist/createNewPlaylist";
+export { deletePlaylist } from "./playlist/deletePlaylist";
+export { getSpecificPlaylist } from "./playlist/getSpecificPlaylist";
+export { addVideoToPlaylist } from "./playlist/addVideoToPlaylist";
+export { removeVideoFromPlaylist } from "./playlist/removeVideoFromPlaylist";

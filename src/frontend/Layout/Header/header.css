@@ -50,6 +50,8 @@
 .nav-elements {
   color: var(--foreground-color);
   text-decoration: none;
+  width: 100%;
+  justify-content:flex-start;
 }
 
 .profile-container {

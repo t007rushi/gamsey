@@ -1,0 +1,33 @@
+.modal-content {
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.create-btn {
+  outline: none;
+  font-weight: 900;
+  border: none;
+  background-color: var(--foreground-color);
+  padding: 5px;
+  cursor: pointer;
+}
+
+.playlist-item {
+  padding: 0 5px;
+  margin: 0 5px;
+}
+
+.CreatePlaylist {
+  margin-top: 5px;
+  padding: 5px;
+}
+
+.create-input {
+  margin-top: 5px;
+}
+.create-input input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid;
+}
