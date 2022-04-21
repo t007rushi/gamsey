@@ -9,8 +9,8 @@
 }
 
 .modal {
-  background-color: white;
-  color: black;
+  background-color: var(--foreground-color);
+  color: var(--background-color);
   width: 12rem;
   margin: auto;
   margin-top: 5rem;
