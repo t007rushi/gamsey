@@ -9,7 +9,11 @@ import {
   REMOVE_PLAYLIST,
 } from "../../constants/playlist-constants";
 import { useAuth } from "../../context/auth-context";
-import { deletePlaylist,removeVideoFromPlaylist,addVideoToPlaylist } from "../../services";
+import {
+  deletePlaylist,
+  removeVideoFromPlaylist,
+  addVideoToPlaylist,
+} from "../../services";
 
 export const PlayListModal = ({ closeFun, vid }) => {
   const { playlistDipatcher } = usePlaylists();
