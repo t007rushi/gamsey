@@ -41,7 +41,7 @@ export const OptionsField = ({ vid }) => {
     const data = await getService("likes", "delete", tokenVal, vid);
     likeDipatcher({ type: RMV_FROM_LIKE, payload: data.likes });
   };
-  const AddTOWatchlater = async () => {
+  const AddToWatchlater = async () => {
     const data = await getService("watchlater", "post", tokenVal, vid);
     watchlaterDipatcher({ type: ADD_TO_WATCHLATER, payload: data.watchlater });
   };
@@ -64,7 +64,7 @@ export const OptionsField = ({ vid }) => {
             ) ? (
               <span
                 className="flex-row gap-btwn video-option"
-                onClick={AddTOWatchlater}
+                onClick={AddToWatchlater}
               >
                 <MdOutlineWatchLater />
                 WatchLater
