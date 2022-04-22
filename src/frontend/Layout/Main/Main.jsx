@@ -35,16 +35,31 @@ export const Main = () => {
             <ProtectedRoute ProtectedComp={<PlayList />}></ProtectedRoute>
           }
         />
-         <Route
+        <Route
           path="/playlist/:playlistID"
           element={
             <ProtectedRoute ProtectedComp={<PlaylistVideos />}></ProtectedRoute>
           }
         />
+
+        <Route
+          path="/liked"
+          element={<ProtectedRoute ProtectedComp={<Liked />}></ProtectedRoute>}
+        />
+
+        <Route
+          path="/watchlater"
+          element={
+            <ProtectedRoute ProtectedComp={<WatchLater />}></ProtectedRoute>
+          }
+        />
+        <Route
+          path="/history"
+          element={
+            <ProtectedRoute ProtectedComp={<History />}></ProtectedRoute>
+          }
+        />
         <Route path="/explore" element={<Explore />} />
-        <Route path="/liked" element={<Liked />} />
-        <Route path="/watchlater" element={<WatchLater />} />
-        <Route path="/history" element={<History />} />
       </Routes>
     </div>
   );
