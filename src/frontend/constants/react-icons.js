@@ -1,5 +1,5 @@
 export {RiPlayList2Fill,RiHistoryLine} from "react-icons/ri"
-export { AiOutlineLike } from "react-icons/ai"
+export { AiOutlineLike,AiOutlineDislike } from "react-icons/ai"
 export { MdOutlineWatchLater,MdOutlineSearch,MdDarkMode,MdOutlineLightMode,MdOutlineArrowForwardIos,MdArrowBackIos, MdExplore,MdPlaylistAdd,MdDeleteOutline } from "react-icons/md"
 export { CgProfile } from "react-icons/cg"
 export { IoMdArrowDropdown } from "react-icons/io"
