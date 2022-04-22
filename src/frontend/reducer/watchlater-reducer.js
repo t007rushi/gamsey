@@ -3,6 +3,10 @@ import {
   RMV_FROM_WATCHLATER,
 } from "../constants/watchlater-constants";
 
+export   const watchlaterInitialState = {
+  watchlater: []
+};
+
 export const WatchlaterReducer = (state, action) => {
   switch (action.type) {
     case ADD_TO_WATCHLATER:
