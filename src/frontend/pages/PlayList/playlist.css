@@ -5,6 +5,18 @@
 
 .playlist-container {
   color: white;
-  margin-top:5rem;
+  margin-top:10rem;
   flex-wrap: wrap;
+}
+
+.rel-img{
+  position: relative;}
+
+.playlist-title{
+  position: absolute;
+  z-index: 2;
+  background: var(--accent--one-color);
+  padding: 10px;
+  width: 10rem;
+  opacity: 0.7;
 }
