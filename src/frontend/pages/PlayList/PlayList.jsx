@@ -17,7 +17,7 @@ export const PlayList = () => {
         playlists.map((item) => {
           return (
             <div
-              className="flex-col center-it"
+              className="flex-col center-it rel-img"
               key={item._id}
               onClick={() => {
                 navigate(`/playlist/${item._id}`);
@@ -28,7 +28,7 @@ export const PlayList = () => {
                 alt="thmbnail"
                 className="playlist-poster"
               />
-              <span>{item.title}</span>
+              <span className="playlist-title">{item.title}</span>
             </div>
           );
         })
