@@ -12,7 +12,7 @@ import {
   SignupPage,
 } from "../../pages/index";
 import { WatchLater } from "../../pages/WatchLater/WatchLater";
-import ProtectedRoute from "../../router/ProtectedRoutes";
+import RequireAuth from "../../router/RequireAuth";
 
 export const Main = () => {
   const {
@@ -32,19 +32,47 @@ export const Main = () => {
         <Route
           path="/playlist"
           element={
-            <ProtectedRoute ProtectedComp={<PlayList />}></ProtectedRoute>
+            <RequireAuth>
+              <PlayList />
+            </RequireAuth>
           }
         />
-         <Route
+        <Route
           path="/playlist/:playlistID"
           element={
-            <ProtectedRoute ProtectedComp={<PlaylistVideos />}></ProtectedRoute>
+            <RequireAuth>
+              <PlaylistVideos />
+            </RequireAuth>
+          }
+        />
+
+        <Route
+          path="/liked"
+          element={
+            <RequireAuth>
+              <Liked />
+            </RequireAuth>
+          }
+        />
+
+        <Route
+          path="/watchlater"
+          element={
+            <RequireAuth>
+              <WatchLater />
+            </RequireAuth>
+          }
+        />
+
+        <Route
+          path="/history"
+          element={
+            <RequireAuth>
+              <History />
+            </RequireAuth>
           }
         />
         <Route path="/explore" element={<Explore />} />
-        <Route path="/liked" element={<Liked />} />
-        <Route path="/watchlater" element={<WatchLater />} />
-        <Route path="/history" element={<History />} />
       </Routes>
     </div>
   );

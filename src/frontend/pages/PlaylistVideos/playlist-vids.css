@@ -1,11 +1,12 @@
 .playlist-vid-wrapper {
   margin-top: 5rem;
-  color:var(--foreground-color)
+  color: var(--foreground-color);
 }
 
 .playlist-vid {
   margin: auto;
-  width: 100%;
+  width: 25rem;
+  justify-content: space-between;
 }
 
 .playlist-vid img {

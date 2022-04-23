@@ -1,7 +1,13 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
-import { ThemeProvider, VideoProvider, AuthProvider } from "../context/index";
-import { PlaylistProvider } from "../context/playlist-context";
+import {
+  ThemeProvider,
+  VideoProvider,
+  AuthProvider,
+  PlaylistProvider,
+  WatchlaterProvider,
+  LikeProvider,
+} from "../context/index";
 
 const CombinedProvider = ({ children }) => {
   return (
@@ -9,7 +15,11 @@ const CombinedProvider = ({ children }) => {
       <ThemeProvider>
         <AuthProvider>
           <VideoProvider>
-            <PlaylistProvider> {children}</PlaylistProvider>
+            <PlaylistProvider>
+              <WatchlaterProvider>
+                <LikeProvider>{children}</LikeProvider>
+              </WatchlaterProvider>
+            </PlaylistProvider>
           </VideoProvider>
         </AuthProvider>
       </ThemeProvider>

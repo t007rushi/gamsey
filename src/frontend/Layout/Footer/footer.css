@@ -1,10 +1,20 @@
-.footer-container {
+.footer-container1 {
   color: var(--foreground-color);
   position: sticky;
   padding: 7px;
   z-index: 2;
+  background-color: var(--background-color);
 }
 
+.footer-container2 {
+  color: var(--foreground-color);
+  position: fixed;
+  padding: 7px;
+  z-index: 2;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--background-color);
+}
 .footer-icon {
   font-size: 1.5rem;
   cursor: pointer;

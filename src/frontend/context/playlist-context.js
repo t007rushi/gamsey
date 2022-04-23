@@ -1,5 +1,5 @@
 import { useState, createContext, useContext,useReducer } from "react";
-import { PlaylistReducer } from "../reducer/playlist-reducer";
+import { playlistInitialState, PlaylistReducer } from "../reducer/playlist-reducer";
 import { getPlaylist } from "../services";
 import { useAuth } from "./auth-context";
 
@@ -9,14 +9,9 @@ const PlaylistProvider = ({ children }) => {
   const [Playlists, setPlaylists] = useState([]);
   const {
     user: { tokenVal },
-  } = useAuth();
+  } = useAuth();  
 
-  const initialState = {
-    playlists: []
-  };
-  
-
-  const [playlistState,playlistDipatcher] = useReducer(PlaylistReducer,initialState)
+  const [playlistState,playlistDipatcher] = useReducer(PlaylistReducer,playlistInitialState)
 
   //Get Playlists
   const fetchPlaylists = async () => {

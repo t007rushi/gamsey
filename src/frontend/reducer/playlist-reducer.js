@@ -5,6 +5,10 @@ import {
   REMOVE_PLAYLIST,
 } from "../constants/playlist-constants";
 
+export const playlistInitialState = {
+  playlists: []
+};
+
 export const PlaylistReducer = (state, action) => {
   switch (action.type) {
     case CREATE_PLAYLIST: {
