@@ -30,6 +30,7 @@ max-height: 20rem;
 
 .listing-wrap{
 flex-direction: column-reverse;
+margin: auto;
 }
 
 @media only screen and (max-width: 830px) {
