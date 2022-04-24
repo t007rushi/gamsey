@@ -10,6 +10,7 @@ import {
   PlayList,
   PlaylistVideos,
   SignupPage,
+  SingleVideo,
 } from "../../pages/index";
 import { WatchLater } from "../../pages/WatchLater/WatchLater";
 import RequireAuth from "../../router/RequireAuth";
@@ -73,6 +74,7 @@ export const Main = () => {
           }
         />
         <Route path="/explore" element={<Explore />} />
+        <Route path="/explore/:singleVid" element={<SingleVideo />} />
       </Routes>
     </div>
   );
