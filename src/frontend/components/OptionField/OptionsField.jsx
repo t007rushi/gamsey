@@ -36,14 +36,17 @@ export const OptionsField = ({ vid }) => {
   const AddToLike = async () => {
     const data = await getService("likes", "post", tokenVal, vid);
     likeDipatcher({ type: ADD_TO_LIKE, payload: data.likes });
+    setShowOptions(false);
   };
   const rmvFromLike = async () => {
     const data = await getService("likes", "delete", tokenVal, vid);
     likeDipatcher({ type: RMV_FROM_LIKE, payload: data.likes });
+    setShowOptions(false);
   };
   const AddToWatchlater = async () => {
     const data = await getService("watchlater", "post", tokenVal, vid);
     watchlaterDipatcher({ type: ADD_TO_WATCHLATER, payload: data.watchlater });
+    setShowOptions(false);
   };
   const rmvFromLWatchlater = async () => {
     const data = await getService("watchlater", "delete", tokenVal, vid);
@@ -51,6 +54,7 @@ export const OptionsField = ({ vid }) => {
       type: RMV_FROM_WATCHLATER,
       payload: data.watchlater,
     });
+    setShowOptions(false);
   };
 
   return (
