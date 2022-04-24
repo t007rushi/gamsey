@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState, createContext, useContext } from "react";
+import { useState, createContext, useContext, useEffect } from "react";
 
 const videoContext = createContext();
 
@@ -8,19 +8,19 @@ const VideoProvider = ({ children }) => {
 
   //Get videos
   const url = "/api/videos";
-  const fetchVideos = async () => {
-    try {
-      const { data } = await axios.get(url);
-      setVideos(data.videos);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  useEffect(() => {
+    (async () => {
+      try {
+        const { data } = await axios.get(url);
+        setVideos(data.videos);
+      } catch (error) {
+        console.log(error);
+      }
+    })();
+  }, []);
 
   return (
-    <videoContext.Provider value={{ videos, fetchVideos }}>
-      {children}
-    </videoContext.Provider>
+    <videoContext.Provider value={{ videos }}>{children}</videoContext.Provider>
   );
 };
 

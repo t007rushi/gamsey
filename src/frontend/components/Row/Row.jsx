@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { useVideos } from "../../context/videos-context";
 import "./row.css";
 import {
@@ -12,11 +12,8 @@ import {
 } from "../../constants/react-icons";
 
 export const Row = ({ cat, title }) => {
-  const { videos, fetchVideos } = useVideos();
+  const { videos } = useVideos();
   const [val, setVal] = useState(0);
-  useEffect(() => {
-    fetchVideos();
-  }, []);
   const Games = videos.filter((vid) => vid.categoryName === cat);
   const ArrowHandler = (dir) => {
     if (dir === "right") {
