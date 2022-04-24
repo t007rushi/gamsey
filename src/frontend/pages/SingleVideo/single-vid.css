@@ -1,0 +1,35 @@
+.video-page{
+    margin:1rem;
+    margin-top: 5rem;
+    color: var(--foreground-color);
+    gap:2rem;
+}
+
+.video-player {
+    aspect-ratio: 16/9;
+  }
+
+.video-title{
+    font-weight:600;
+    font-size: 1.5rem;
+    gap:2rem;
+}
+
+.video-details{
+  font-size: 1.5rem;
+  justify-content: space-between;
+}
+
+.video-options{
+  display: flex; 
+  justify-content:space-between;
+  width:7rem;
+}
+
+@media only screen and (max-width: 750px) {
+    .video-page {
+      flex-direction: column;
+    }
+  }
+
+
