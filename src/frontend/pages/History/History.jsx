@@ -1,10 +1,23 @@
 import React from 'react'
 import { OptionsField } from '../../components';
+import { CLEAR_HISTORY } from '../../constants/history-constants';
+import { useAuth } from '../../context/auth-context';
 import { useHistory } from '../../context/history-context';
+import { getService } from '../../services/combinedService';
+import "./history.css"
 
 export const History = () => {
-  const {historyState:{history}} = useHistory();
- 
+  const {historyState:{history},historyDipatcher} = useHistory();
+  const {
+    user: { tokenVal },
+  } = useAuth();
+ const all = {_id:"all"}
+  const clearAllHistoryHandler = async()  =>
+  {
+    const data = await getService("history", "delete", tokenVal, all);
+    historyDipatcher({ type: CLEAR_HISTORY, payload: data.history });
+  }
+
   return (
     <div className="flex-row display-details-container">
     {history.length === 0 ? (
@@ -19,9 +32,9 @@ export const History = () => {
             alt=""
           />
           <div className="display-title">HISTORY</div>
-          <div className="description"></div>
         </div>
         <div className="flex-col gap-btwn listing-wrap">
+        
           {history.map((video) => {
             return (
               <div className="flex-row playlist-vid" key={video._id}>
@@ -39,9 +52,11 @@ export const History = () => {
               </div>
             );
           })}
+          <button onClick={clearAllHistoryHandler} className="clear-btn" >CLEAR HISTORY</button>
         </div>
       </>
     )}
+ 
   </div>
   )
 }
