@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
 import { useVideos } from "../../context/videos-context";
 import { BsDot } from "../../constants/react-icons";
