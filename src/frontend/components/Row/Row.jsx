@@ -1,15 +1,11 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import { useVideos } from "../../context/videos-context";
 import "./row.css";
 import {
   MdOutlineArrowForwardIos,
   MdArrowBackIos,
-  RiPlayList2Fill,
-  AiOutlineLike,
-  MdOutlineWatchLater,
-  RiHistoryLine,
 } from "../../constants/react-icons";
+import { useNavigate } from "react-router-dom";
 
 export const Row = ({ cat, title }) => {
   const { videos } = useVideos();
@@ -23,6 +19,8 @@ export const Row = ({ cat, title }) => {
       setVal((vidWidth) => vidWidth + 20);
     }
   };
+
+  const navigate = useNavigate();
 
   return (
     <>
@@ -40,13 +38,14 @@ export const Row = ({ cat, title }) => {
                 className="title_wrap"
                 style={{ transform: `translateX(${val}rem)` }}
               >
-                <img src={image} alt="images" className="title_poster" />
-                <div className="option-icons">
-                  <RiPlayList2Fill />
-                  <AiOutlineLike />
-                  <MdOutlineWatchLater />
-                  <RiHistoryLine />
-                </div>
+                <img
+                  src={image}
+                  alt="images"
+                  className="title_poster"
+                  onClick={() => {
+                    navigate(`/explore/${_id}`);
+                  }}
+                />
               </div>
             );
           })}
