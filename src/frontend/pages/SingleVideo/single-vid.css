@@ -24,6 +24,20 @@
   display: flex; 
   justify-content:space-between;
   width:7rem;
+  
+}
+
+.video-options *{
+  cursor: pointer;
+}
+
+.video-title{
+text-align: left;
+}
+
+.video-details-section{
+padding: 5px;
+margin: 10px 5px;
 }
 
 @media only screen and (max-width: 750px) {
