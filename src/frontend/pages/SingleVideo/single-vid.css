@@ -40,6 +40,10 @@ padding: 5px;
 margin: 10px 5px;
 }
 
+.vid-page-container{
+  flex-grow:1;
+}
+
 @media only screen and (max-width: 750px) {
     .video-page {
       flex-direction: column;
