@@ -21,6 +21,7 @@
   color: var(--foreground-color);
   gap: 5px;
   padding: 10px;
+  width: 100%;
 }
 
 .views-time-wrap {

@@ -11,6 +11,7 @@
     height: fit-content;
     left: 3rem;
     right: 0;
+    display: flex;
 }
 .display-details img{
 max-width: 25rem;
@@ -30,6 +31,7 @@ max-height: 20rem;
 
 .listing-wrap{
 flex-direction: column-reverse;
+margin: auto;
 }
 
 @media only screen and (max-width: 830px) {

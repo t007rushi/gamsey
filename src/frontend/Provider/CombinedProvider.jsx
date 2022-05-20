@@ -7,6 +7,7 @@ import {
   PlaylistProvider,
   WatchlaterProvider,
   LikeProvider,
+  HistoryProvider
 } from "../context/index";
 
 const CombinedProvider = ({ children }) => {
@@ -17,7 +18,8 @@ const CombinedProvider = ({ children }) => {
           <VideoProvider>
             <PlaylistProvider>
               <WatchlaterProvider>
-                <LikeProvider>{children}</LikeProvider>
+                <LikeProvider>
+                  <HistoryProvider>{children}</HistoryProvider> </LikeProvider>
               </WatchlaterProvider>
             </PlaylistProvider>
           </VideoProvider>
