@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { Browse } from "../../components/Browse/Browse";
 import { optionsData } from "../../constants/data/optionsData";
 import {
-  MdOutlineSearch,
+  // MdOutlineSearch,
   CgProfile,
   IoMdArrowDropdown,
   MdDarkMode,
@@ -25,7 +25,7 @@ export const Header = () => {
   const [profileop, showProfileop] = useState(false);
 
   useOnClickOutside(Profieref, () => showProfileop(false));
-  const closeBrowse = () => setShowBrowse(false)
+  const closeBrowse = () => setShowBrowse(false);
 
   return (
     <>
@@ -58,10 +58,10 @@ export const Header = () => {
         </div>
 
         <div className="flex-row center-it gap-btwn header-right-content">
-          <div className="search-wrapper">
+          {/* <div className="search-wrapper">
             <MdOutlineSearch className="search-icon" />
             <input type="text" placeholder="Search " className="search-bar" />
-          </div>
+          </div> */}
           {theme === "light" ? (
             <MdOutlineLightMode onClick={toggleTheme} />
           ) : (
@@ -82,7 +82,6 @@ export const Header = () => {
                   className="flex-col spac-btwn center-it profile-options"
                   ref={Profieref}
                 >
-                  <span>Account</span>
                   <span onClick={signOutHandler}>Log Out</span>
                 </div>
               )}
@@ -90,7 +89,7 @@ export const Header = () => {
           )}
         </div>
       </header>
-      {showBrowse && <Browse closeBrowse={closeBrowse}/>}
+      {showBrowse && <Browse closeBrowse={closeBrowse} />}
     </>
   );
 };
