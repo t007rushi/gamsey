@@ -1,4 +1,5 @@
 import axios from "axios";
+import { toast } from "react-toastify";
 
 export const deletePlaylist = async (playlistId, token) => {
   try {
@@ -7,8 +8,10 @@ export const deletePlaylist = async (playlistId, token) => {
         authorization: token,
       },
     });
+    toast.success(`Playlist Deleted successfully`);
     return data;
   } catch (err) {
     console.log(err);
+    toast.error("Error occured, try again");
   }
 };
