@@ -27,6 +27,7 @@ export const SignupPage = () => {
             <input
               type="text"
               className="form-input-box"
+              required
               onChange={(e) =>
                 setSignUser({ ...signUser, first: e.target.value })
               }
@@ -37,6 +38,7 @@ export const SignupPage = () => {
             <input
               type="text"
               className="form-input-box"
+              required
               onChange={(e) =>
                 setSignUser({ ...signUser, last: e.target.value })
               }
@@ -47,7 +49,8 @@ export const SignupPage = () => {
             <input
               type="email"
               className="form-input-box"
-              placeholder="monstar@neog.camp"
+              required
+              placeholder="test@gmail.com"
               onChange={(e) =>
                 setSignUser({ ...signUser, email: e.target.value })
               }
@@ -61,6 +64,7 @@ export const SignupPage = () => {
             Password
             <input
               type="password"
+              required
               className="form-input-box"
               onChange={(e) =>
                 setSignUser({ ...signUser, password: e.target.value })
@@ -68,7 +72,12 @@ export const SignupPage = () => {
             />
           </label>
           <div className="flex-row center-it form-mid">
-            <input type="checkbox" className="acc-color" id="remember-me" />
+            <input
+              type="checkbox"
+              className="acc-color"
+              id="remember-me"
+              required
+            />
             <p className="form-text">
               By continuing, you agree to Swift-UI <br></br>
               <span className="form-cond"> Terms of Use </span> and

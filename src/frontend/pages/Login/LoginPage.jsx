@@ -29,6 +29,7 @@ export const LoginPage = () => {
             UserID/Email
             <input
               type="email"
+              required
               className="form-input-box"
               placeholder="monkstar@neog.camp"
               onChange={(e) =>
@@ -36,7 +37,10 @@ export const LoginPage = () => {
               }
             />
           </label>
-          <label htmlFor="password" className="flex-col gap-btwn form-input-txt">
+          <label
+            htmlFor="password"
+            className="flex-col gap-btwn form-input-txt"
+          >
             Password
             <input
               type="password"
