@@ -1,0 +1,35 @@
+.opacity-0 {
+  display: none;
+}
+
+.category-conatiner {
+  margin: 1rem;
+  margin-top: 5rem;
+  gap: 1rem;
+  overflow-x: scroll;
+}
+
+.category-conatiner::-webkit-scrollbar {
+  display: none;
+}
+
+.label {
+  padding: 6px 3px;
+  height: 2rem;
+  background-color: var(--fixed-grey-color);
+  color: var(--accent--one-color);
+  border-radius: 1rem;
+  width: 5rem;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.unmatched-style {
+  background-color: var(--accent--three-color);
+  color: var(--foreground-color);
+  border: 1px solid white;
+}

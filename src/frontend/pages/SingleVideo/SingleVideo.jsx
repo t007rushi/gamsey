@@ -26,11 +26,12 @@ import {
   ADD_TO_WATCHLATER,
   RMV_FROM_WATCHLATER,
 } from "../../constants/watchlater-constants";
+import { toast } from "react-toastify";
 
 export const SingleVideo = () => {
   const params = useParams();
   const {
-    user: { tokenVal },
+    user: { tokenVal, isUserLoggedIn },
   } = useAuth();
   const { videos } = useVideos();
 
@@ -38,6 +39,7 @@ export const SingleVideo = () => {
     historyState: { history },
     historyDipatcher,
   } = useHistory();
+
   const { likeState, likeDipatcher } = useLike();
   const { watchlaterState, watchlaterDipatcher } = useWatchlater();
   const currentVideo = videos.find((vid) => vid?._id === params.singleVid);
@@ -117,18 +119,45 @@ export const SingleVideo = () => {
               {!likeState.likes.some(
                 (item) => item._id === currentVideo._id
               ) ? (
-                <AiOutlineLike onClick={AddToLike} />
+                <AiOutlineLike
+                  onClick={() => {
+                    if (isUserLoggedIn) {
+                      AddToLike();
+                    } else {
+                      toast.warning("Login to continue");
+                      navigate("/login");
+                    }
+                  }}
+                />
               ) : (
                 <AiFillLike onClick={rmvFromLike} />
               )}
               {!watchlaterState.watchlater.some(
                 (item) => item._id === currentVideo._id
               ) ? (
-                <MdOutlineWatchLater onClick={AddToWatchlater} />
+                <MdOutlineWatchLater
+                  onClick={() => {
+                    if (isUserLoggedIn) {
+                      AddToWatchlater();
+                    } else {
+                      toast.warning("Login to continue");
+                      navigate("/login");
+                    }
+                  }}
+                />
               ) : (
                 <FaBan onClick={rmvFromLWatchlater} />
               )}
-              <MdPlaylistAdd onClick={openModal} />
+              <MdPlaylistAdd
+                onClick={() => {
+                  if (isUserLoggedIn) {
+                    openModal();
+                  } else {
+                    toast.warning("Login to continue");
+                    navigate("/login");
+                  }
+                }}
+              />
             </div>
           </div>
           <div className="video-description">{currentVideo?.description}</div>

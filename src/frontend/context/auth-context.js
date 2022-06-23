@@ -5,6 +5,7 @@ import {
   signUpHandlerService,
   signOutHandlerService,
 } from "../services";
+import { toast } from "react-toastify";
 
 const authContext = createContext();
 const token = localStorage.getItem("Auth_token");
@@ -19,6 +20,7 @@ const AuthProvider = ({ children }) => {
   const logInHandler = async ({ email, password }) => {
     const { data, status } = await logInHandlerService(email, password);
     if (status === 200) {
+      toast.success("Signed In Succesfully");
       localStorage.setItem("Auth_token", JSON.stringify(data.encodedToken));
       setUser({
         tokenVal: JSON.stringify(data.encodedToken),
@@ -28,14 +30,18 @@ const AuthProvider = ({ children }) => {
     }
   };
 
+  //signup
   const signUpHandler = async ({ first, last, email, password }) => {
     const data = await signUpHandlerService(first, last, email, password);
-    // saving the encodedToken in the localStorage
+    toast.success("Signed Up Succesfully");
     localStorage.setItem("Auth_token", data.encodedToken);
     navigator("/");
   };
+
+  //signout
   const signOutHandler = async () => {
     signOutHandlerService();
+    toast.success("Signed out Succesfully");
     setUser({ isUserLoggedIn: false });
     navigator("/");
   };

@@ -1,4 +1,5 @@
 import axios from "axios";
+import { toast } from "react-toastify";
 
 export const addVideoToPlaylist = async (playlistId, video, token) => {
   try {
@@ -11,8 +12,10 @@ export const addVideoToPlaylist = async (playlistId, video, token) => {
         },
       }
     );
+    toast.success(`${video.title} added to Playlist`);
     return data;
   } catch (err) {
     console.log(err.message);
+    toast.error("Error while adding video try again");
   }
 };

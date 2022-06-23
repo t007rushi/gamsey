@@ -1,4 +1,5 @@
 import axios from "axios";
+import { toast } from "react-toastify";
 
 //LOGIN
 export const logInHandlerService = async (email, pass) => {
@@ -9,6 +10,7 @@ export const logInHandlerService = async (email, pass) => {
     });
     return res;
   } catch (error) {
-    console.error("Invalid email or password", error);
+    console.error(error);
+    toast.error("Invalid email or password");
   }
 };

@@ -1,7 +1,7 @@
 import axios from "axios";
+import { toast } from "react-toastify";
 
 export const getService = async (category, method, token, video) => {
-
   try {
     switch (method) {
       case "get": {
@@ -10,6 +10,7 @@ export const getService = async (category, method, token, video) => {
             authorization: token,
           },
         });
+        toast.success(`video is here`);
         return data;
       }
       case "post": {
@@ -22,14 +23,19 @@ export const getService = async (category, method, token, video) => {
             },
           }
         );
+        toast.success(`video Added to ${category}`);
         return data;
       }
       case "delete": {
-        const { data } = await axios[method](`/api/user/${category}/${video._id}`, {
-          headers: {
-            authorization: token,
-          },
-        });
+        const { data } = await axios[method](
+          `/api/user/${category}/${video._id}`,
+          {
+            headers: {
+              authorization: token,
+            },
+          }
+        );
+        toast.success(`video removed from ${category}`);
         return data;
       }
       default:
@@ -37,5 +43,6 @@ export const getService = async (category, method, token, video) => {
     }
   } catch (err) {
     console.log(err.message);
+    toast.error("Error Occured");
   }
 };

@@ -1,5 +1,3 @@
-import { v4 as uuid } from "uuid";
-
 /**
  * Videos Database can be added here.
  * You can add videos of your wish with different attributes
@@ -287,7 +285,7 @@ export const videos = [
     createdAt: "a week",
   },
   {
-    _id: "EE-4GvjKcfs&t=20s",
+    _id: "gV5rIW1Qums",
     title: "god of war",
     image:
       "https://ik.imagekit.io/t007rushi/VideoCardImages/ps5/deathloop_image_dajIZg2zu.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649669899656",
@@ -299,7 +297,7 @@ export const videos = [
     creator: "mad gamer",
   },
   {
-    _id: uuid(),
+    _id: "B9ssJosMOz8",
     title: "god of war",
     image:
       "https://ik.imagekit.io/t007rushi/VideoCardImages/ps5/deathloop_image_dajIZg2zu.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649669899656",
@@ -311,7 +309,7 @@ export const videos = [
     creator: "Rushikesh Tarapure",
   },
   {
-    _id: uuid(),
+    _id: "fIwo1hnTIks",
     title: "god of war",
     image:
       "https://ik.imagekit.io/t007rushi/VideoCardImages/ps5/deathloop_image_dajIZg2zu.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649669899656",
@@ -322,7 +320,7 @@ export const videos = [
     creator: "Rushikesh Tarapure",
   },
   {
-    _id: uuid(),
+    _id: "3worI7QeCHQ",
     title: "god of war",
     image:
       "https://ik.imagekit.io/t007rushi/VideoCardImages/ps5/deathloop_image_dajIZg2zu.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649669899656",
@@ -333,7 +331,7 @@ export const videos = [
     creator: "Rushikesh Tarapure",
   },
   {
-    _id: uuid(),
+    _id: "Pq0GssrjyMw",
     title: "god of war",
     image:
       "https://ik.imagekit.io/t007rushi/VideoCardImages/ps5/deathloop_image_dajIZg2zu.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649669899656",
@@ -344,7 +342,7 @@ export const videos = [
     creator: "Rushikesh Tarapure",
   },
   {
-    _id: uuid(),
+    _id: "BwRVPL8l9aI",
     title: "god of war",
     image:
       "https://ik.imagekit.io/t007rushi/VideoCardImages/ps5/deathloop_image_dajIZg2zu.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649669899656",
@@ -355,7 +353,7 @@ export const videos = [
     creator: "Rushikesh Tarapure",
   },
   {
-    _id: uuid(),
+    _id: "1O6Qstncpnc",
     title: "god of war",
     image:
       "https://ik.imagekit.io/t007rushi/VideoCardImages/ps5/deathloop_image_dajIZg2zu.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649669899656",
@@ -366,7 +364,7 @@ export const videos = [
     creator: "Rushikesh Tarapure",
   },
   {
-    _id: uuid(),
+    _id: "s1NENhRDb6c",
     title: "god of war",
     image:
       "https://ik.imagekit.io/t007rushi/VideoCardImages/ps5/deathloop_image_dajIZg2zu.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649669899656",
@@ -377,7 +375,7 @@ export const videos = [
     creator: "Rushikesh Tarapure",
   },
   {
-    _id: uuid(),
+    _id: "j0g_OWpAskk",
     title: "god of war",
     image:
       "https://ik.imagekit.io/t007rushi/VideoCardImages/ps5/deathloop_image_dajIZg2zu.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649669899656",
@@ -388,7 +386,7 @@ export const videos = [
     creator: "Rushikesh Tarapure",
   },
   {
-    _id: uuid(),
+    _id: "l1Un_qSf4BM",
     title: "god of war",
     image:
       "https://ik.imagekit.io/t007rushi/VideoCardImages/ps5/deathloop_image_dajIZg2zu.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649669899656",
@@ -399,7 +397,7 @@ export const videos = [
     creator: "Rushikesh Tarapure",
   },
   {
-    _id: uuid(),
+    _id: "Op0Gb_S-_m4",
     title: "god of war",
     image:
       "https://ik.imagekit.io/t007rushi/VideoCardImages/xbox/halo_pXxZDHd6_.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1649669918874",
@@ -410,7 +408,7 @@ export const videos = [
     creator: "Rushikesh Tarapure",
   },
   {
-    _id: uuid(),
+    _id: "tcma1alftrM",
     title: "god of war",
     image:
       "https://ik.imagekit.io/t007rushi/VideoCardImages/xbox/halo_pXxZDHd6_.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1649669918874",
@@ -421,7 +419,7 @@ export const videos = [
     creator: "Rushikesh Tarapure",
   },
   {
-    _id: uuid(),
+    _id: "c_VkpXudWf4",
     title: "god of war",
     image:
       "https://ik.imagekit.io/t007rushi/VideoCardImages/xbox/halo_pXxZDHd6_.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1649669918874",
@@ -432,7 +430,7 @@ export const videos = [
     creator: "Rushikesh Tarapure",
   },
   {
-    _id: uuid(),
+    _id: "JSfuFlhsxZY",
     title: "god of war",
     image:
       "https://ik.imagekit.io/t007rushi/VideoCardImages/xbox/halo_pXxZDHd6_.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1649669918874",
@@ -443,7 +441,7 @@ export const videos = [
     creator: "Rushikesh Tarapure",
   },
   {
-    _id: uuid(),
+    _id: "O_ebBkL14Cg",
     title: "god of war",
     image:
       "https://ik.imagekit.io/t007rushi/VideoCardImages/xbox/halo_pXxZDHd6_.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1649669918874",
@@ -454,7 +452,7 @@ export const videos = [
     creator: "Rushikesh Tarapure",
   },
   {
-    _id: uuid(),
+    _id: "fcs0eyZF6ng",
     title: "god of war",
     image:
       "https://ik.imagekit.io/t007rushi/VideoCardImages/xbox/halo_pXxZDHd6_.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1649669918874",
@@ -465,7 +463,7 @@ export const videos = [
     creator: "Rushikesh Tarapure",
   },
   {
-    _id: uuid(),
+    _id: "-Wnq99psFcA",
     title: "god of war",
     image:
       "https://ik.imagekit.io/t007rushi/VideoCardImages/xbox/halo_pXxZDHd6_.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1649669918874",
@@ -476,7 +474,7 @@ export const videos = [
     creator: "Rushikesh Tarapure",
   },
   {
-    _id: uuid(),
+    _id: "VdtzPh-ovNc",
     title: "god of war",
     image:
       "https://ik.imagekit.io/t007rushi/VideoCardImages/xbox/halo_pXxZDHd6_.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1649669918874",
@@ -487,7 +485,7 @@ export const videos = [
     creator: "Rushikesh Tarapure",
   },
   {
-    _id: uuid(),
+    _id: "v0la5sw15k0",
     title: "god of war",
     image:
       "https://ik.imagekit.io/t007rushi/VideoCardImages/xbox/halo_pXxZDHd6_.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1649669918874",
@@ -498,25 +496,17 @@ export const videos = [
     creator: "Rushikesh Tarapure",
   },
   {
-    _id: uuid(),
+    _id: "7hrsYu8Vy04",
     title: "god of war",
     image:
-      "https://ik.imagekit.io/t007rushi/VideoCardImages/xbox/halo_pXxZDHd6_.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1649669918874",
+      "https://ik.imagekit.io/t007rushi/VideoCardImages/pc/farcry6_KgK7f2lbZE.png?ik-sdk-version=javascript-1.4.3&updatedAt=1649669798331",
     categoryName: "xbox",
     genre: "action",
     description:
       "God of War is an action-adventure game franchise created by David Jaffe at Sony's Santa Monica Studio. ",
     creator: "Rushikesh Tarapure",
-  },
-  {
-    _id: uuid(),
-    title: "god of war",
-    image:
-      "https://ik.imagekit.io/t007rushi/VideoCardImages/xbox/halo_pXxZDHd6_.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1649669918874",
-    categoryName: "xbox",
-    genre: "action",
-    description:
-      "God of War is an action-adventure game franchise created by David Jaffe at Sony's Santa Monica Studio. ",
-    creator: "Rushikesh Tarapure",
+    video: "https://www.youtube.com/watch?v=-IJuKT1mHO8",
+    views: 100,
+    createdAt: "a week",
   },
 ];
