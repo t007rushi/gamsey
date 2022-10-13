@@ -1,14 +1,14 @@
 .vid-listing-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-  margin: 5rem 1rem;
+  gap: 1.5rem;
+  min-width: 100vw;
+  margin-left: 1.2rem;
 }
 
 .vid-wrapper {
-  flex-grow: 1;
   min-height: 15rem;
-  width: 20rem;
+  max-width: 22rem;
 }
 
 .vid-wrapper img {
@@ -30,4 +30,14 @@
 
 .title-optionicon-wrap {
   width: 100%;
+}
+
+.search-msg {
+  color: var(--foreground-color);
+}
+
+@media only screen and (max-width: 750px) {
+  .vid-wrapper {
+    flex-grow: 1;
+  }
 }

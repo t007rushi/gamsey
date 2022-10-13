@@ -18,6 +18,8 @@ import {
   ADD_TO_WATCHLATER,
   RMV_FROM_WATCHLATER,
 } from "../../constants/watchlater-constants";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 export const OptionsField = ({ vid }) => {
   const [showOptions, setShowOptions] = useState(false);
@@ -29,9 +31,10 @@ export const OptionsField = ({ vid }) => {
 
   const { watchlaterState, watchlaterDipatcher } = useWatchlater();
   const { likeState, likeDipatcher } = useLike();
+  const navigate = useNavigate();
 
   const {
-    user: { tokenVal },
+    user: { tokenVal, isUserLoggedIn },
   } = useAuth();
   const AddToLike = async () => {
     const data = await getService("likes", "post", tokenVal, vid);
@@ -68,7 +71,14 @@ export const OptionsField = ({ vid }) => {
             ) ? (
               <span
                 className="flex-row gap-btwn video-option"
-                onClick={AddToWatchlater}
+                onClick={() => {
+                  if (isUserLoggedIn) {
+                    AddToWatchlater();
+                  } else {
+                    toast.warning("Login to continue");
+                    navigate("/login");
+                  }
+                }}
               >
                 <MdOutlineWatchLater />
                 WatchLater
@@ -84,7 +94,14 @@ export const OptionsField = ({ vid }) => {
             )}
             <span
               className="flex-row gap-btwn video-option"
-              onClick={openModal}
+              onClick={() => {
+                if (isUserLoggedIn) {
+                  openModal();
+                } else {
+                  toast.warning("Login to continue");
+                  navigate("/login");
+                }
+              }}
             >
               <MdPlaylistAdd />
               SAVE
@@ -92,7 +109,14 @@ export const OptionsField = ({ vid }) => {
             {!likeState.likes.some((item) => item._id === vid._id) ? (
               <span
                 className="flex-row gap-btwn video-option"
-                onClick={AddToLike}
+                onClick={() => {
+                  if (isUserLoggedIn) {
+                    AddToLike();
+                  } else {
+                    toast.warning("Login to continue");
+                    navigate("/login");
+                  }
+                }}
               >
                 <AiOutlineLike />
                 Like

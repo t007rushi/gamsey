@@ -10,9 +10,11 @@ import {
   MdOutlineLightMode,
 } from "../../constants/react-icons";
 import { useAuth } from "../../context/auth-context";
+import { useFilter } from "../../context/filter-context";
 import { useTheme } from "../../context/theme-context";
 import { useOnClickOutside } from "../../hooks/onClickOutside";
 import "./header.css";
+import { useNavigate } from "react-router-dom";
 
 export const Header = () => {
   const { theme, toggleTheme } = useTheme();
@@ -23,9 +25,10 @@ export const Header = () => {
   } = useAuth();
   const Profieref = useRef();
   const [profileop, showProfileop] = useState(false);
-
+  const { dispatcherforfilter } = useFilter();
   useOnClickOutside(Profieref, () => showProfileop(false));
-  const closeBrowse = () => setShowBrowse(false)
+  const closeBrowse = () => setShowBrowse(false);
+  const navigate = useNavigate();
 
   return (
     <>
@@ -60,7 +63,18 @@ export const Header = () => {
         <div className="flex-row center-it gap-btwn header-right-content">
           <div className="search-wrapper">
             <MdOutlineSearch className="search-icon" />
-            <input type="text" placeholder="Search " className="search-bar" />
+            <input
+              type="text"
+              placeholder="Search "
+              className="search-bar"
+              onChange={(e) => {
+                navigate("/explore");
+                dispatcherforfilter({
+                  type: "SEARCH",
+                  payload: e.target.value,
+                });
+              }}
+            />
           </div>
           {theme === "light" ? (
             <MdOutlineLightMode onClick={toggleTheme} />
@@ -82,7 +96,6 @@ export const Header = () => {
                   className="flex-col spac-btwn center-it profile-options"
                   ref={Profieref}
                 >
-                  <span>Account</span>
                   <span onClick={signOutHandler}>Log Out</span>
                 </div>
               )}
@@ -90,7 +103,7 @@ export const Header = () => {
           )}
         </div>
       </header>
-      {showBrowse && <Browse closeBrowse={closeBrowse}/>}
+      {showBrowse && <Browse closeBrowse={closeBrowse} />}
     </>
   );
 };
